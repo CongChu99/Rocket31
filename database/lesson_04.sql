@@ -65,7 +65,37 @@ FROM `group`
 LEFT JOIN `group_account` USING (group_id)
 GROUP BY group_id;
 
--- Question
+-- Question 10
+SELECT `position`.*
+FROM `account`
+JOIN `position` USING (position_id)
+GROUP BY position_id
+HAVING COUNT(account_id) = (SELECT MIN(total_positions)
+								FROM (SELECT COUNT(position_id) AS total_positions
+										FROM `account`
+										GROUP BY position_id) AS t1);
+                                        
+-- Question 11
+SELECT department_name, position_name, COUNT(account_id) AS total_account
+FROM department
+CROSS JOIN `position`
+LEFT JOIN `account` USING (department_id, position_id)
+GROUP BY department_id, position_id;
+
+-- Question 12
+SELECT *
+FROM question
+JOIN type_question USING (type_id)
+JOIN answer USING (question_id)
+JOIN category_question USING (category_id)
+JOIN `account` ON question.creator_id = `account`.account_id;
+
+-- Question 13
+SELECT type_question.*, COUNT(question_id)
+FROM type_question
+LEFT JOIN question USING (type_id)
+GROUP BY type_id;
+
 
 -- Question 14,15
 SELECT `group`.*
