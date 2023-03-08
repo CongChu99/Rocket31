@@ -1,0 +1,7 @@
+-- Question 3
+CREATE OR REPLACE VIEW view_03 AS
+SELECT *
+FROM question
+WHERE CHAR_LENGTH(content) > 300;
+
+DELETE FROM view_03;
