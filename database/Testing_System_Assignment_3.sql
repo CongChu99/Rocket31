@@ -9,6 +9,16 @@ SELECT *
 FROM department
 WHERE department_name = 'Sale';
 
+/* Bai 04 */
+SELECT *
+FROM `account`
+WHERE char_length(full_name) >= ALL(SELECT CHAR_LENGTH(full_name) FROM `account`);
+
+/* Bai 05 */
+SELECT *
+FROM `account`
+WHERE department_id = 3 AND char_length(full_name) >= ALL(SELECT CHAR_LENGTH(full_name) FROM `account` WHERE department_id = 3);
+
 /* Bai 06	*/
 SELECT group_name
 FROM `group`
