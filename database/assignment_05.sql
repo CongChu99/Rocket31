@@ -16,11 +16,24 @@ HAVING COUNT(group_account.account_id) = (SELECT MAX(all_count) AS maxCount
 										FROM group_account
 										GROUP BY account_id) AS t1);
 
+CREATE OR REPLACE VIEW view_cau_02b AS
+WITH cte_cau_02 AS (
+    SELECT `account`.*, COUNT(group_id) AS total_groups
+    FROM group_account
+    JOIN `account` USING (account_id)
+    GROUP BY account_id
+)
+SELECT *
+FROM cte_cau_02
+WHERE total_groups =
+    (SELECT MAX(total_groups)
+    FROM cte_cau_02);
+    
 -- Question 3
 CREATE OR REPLACE VIEW view_03 AS
 SELECT *
 FROM question
-WHERE CHAR_LENGTH(content) > 300;
+WHERE LENGTH(content) - LENGTH(REPLACE(content, ' ', '')) + 1 > 300;
 
 DELETE FROM view_03;
 
