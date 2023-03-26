@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 public class DatatypeDemo {
     public static void main(String[] args) {
@@ -47,6 +48,7 @@ public class DatatypeDemo {
         System.out.println("scores1[0] = " + scores1[0]);
         int length = scores1.length;
         System.out.println("scores1[length - 1] = " + scores1[length - 1]);
+        System.out.println("scores1 = " + Arrays.toString(scores1));
     }
 
     enum Gender{
