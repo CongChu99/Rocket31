@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java core.iml" filepath="$PROJECT_DIR$/.idea/Java core.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-core/assignment-01/assignment-01.iml" filepath="$PROJECT_DIR$/java-core/assignment-01/assignment-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assignment-02.iml" filepath="$PROJECT_DIR$/assignment-02.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-core/java-core.iml" filepath="$PROJECT_DIR$/java-core/java-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-core/lesson-01/lesson-01.iml" filepath="$PROJECT_DIR$/java-core/lesson-01/lesson-01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lesson-02.iml" filepath="$PROJECT_DIR$/lesson-02.iml" />
     </modules>
   </component>
 </project>
