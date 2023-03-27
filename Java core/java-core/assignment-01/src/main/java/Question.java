@@ -5,6 +5,7 @@ public class Question {
     String content;
     CategoryQuestion category;
     TypeQuestion type;
-    Account account;
-    LocalDate createDate;
+    Account creator;
+    LocalDate createdDate;
+    Answer[] answers;
 }

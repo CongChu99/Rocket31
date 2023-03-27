@@ -1,4 +1,9 @@
 public class TypeQuestion {
     int id;
-    String name;
+    TypeName name;
+    Question[] questions;
+
+    enum TypeName {
+        ESSAY, MULTIPLE_CHOICE
+    }
 }

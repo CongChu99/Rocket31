@@ -3,6 +3,7 @@ import java.time.LocalDate;
 public class Group {
     int id;
     String name;
-    Account account;
-    LocalDate createDate;
+    Account creator;
+    LocalDate createdDate;
+    Account[] accounts;
 }

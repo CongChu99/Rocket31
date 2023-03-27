@@ -31,11 +31,27 @@ BEGIN
 END $$
 DELIMITER ;
 -- Question 3: Cấu hình 1 group có nhiều nhất là 5 user
+
 -- Question 4: Cấu hình 1 bài thi có nhiều nhất là 10 Question
+
 -- Question 5: Tạo trigger không cho phép người dùng xóa tài khoản có email là
 -- admin@gmail.com (đây là tài khoản admin, không cho phép user xóa),
 -- còn lại các tài khoản khác thì sẽ cho phép xóa và sẽ xóa tất cả các thông
 -- tin liên quan tới user đó
+DROP TRIGGER IF EXISTS trigger_bai_05;
+DELIMITER $$
+CREATE TRIGGER trigger_bai_05
+BEFORE INSERT ON `account`
+FOR EACH ROW
+BEGIN
+	IF NEW.department_id = 2 THEN
+		-- SET NEW.created_date = NOW();
+        SIGNAL SQLSTATE '12345'
+        SET MESSAGE_TEXT = 'Department "Sale" cannot add more user';
+    END IF;
+END $$
+DELIMITER ;
+
 -- Question 6: Không sử dụng cấu hình default cho field DepartmentID của table
 -- Account, hãy tạo trigger cho phép người dùng khi tạo account không điền
 -- vào departmentID thì sẽ được phân vào phòng ban "waiting Department"
