@@ -1,8 +1,8 @@
 public class WhileDemo {
     public static void main(String[] args) {
-        String[] fruits = {"cam", "tao", "dao"};
-        int i = 10;
-        while (fruits.length == 1) {
+        String[] fruits = {"Cam", "Táo", "Đào"};
+        int i = 0;
+        while (i < fruits.length) {
             System.out.println(fruits[i]);
             i = i + 1;
         }

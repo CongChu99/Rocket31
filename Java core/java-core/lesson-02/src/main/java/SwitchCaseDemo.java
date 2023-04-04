@@ -5,15 +5,14 @@ public class SwitchCaseDemo {
             case 4:
             case 6:
             case 9:
-            case 1:
-                System.out.println("Co 30 ngay");
+            case 11:
+                System.out.println("Có 30 ngày");
                 break;
             case 2:
-                System.out.println("Co 28 ngay");
+                System.out.println("Có 28 ngày");
                 break;
             default:
-                System.out.println("Co 31 ngay");
-                break;
+                System.out.println("Có 31 ngày");
         }
     }
 }

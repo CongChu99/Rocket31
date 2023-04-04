@@ -1,12 +1,12 @@
 public class ContinueDemo {
     public static void main(String[] args) {
-        String[] fruits = {"cam", "tao", "dao"};
-        for (String fruit:fruits) {
-            System.out.println("dang tim kiem...");
-            if(!fruit.equals("tao")) {
+        String[] fruits = {"Cam", "Táo", "Đào"};
+        for (String fruit : fruits) {
+            System.out.println("Đang tìm kiếm...");
+            if (!fruit.equals("Táo")) {
                 continue;
             }
-            System.out.println("Da tim thay");
+            System.out.println("Đã tìm thấy");
         }
     }
 }

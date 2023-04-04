@@ -6,21 +6,23 @@ import java.util.Locale;
 public class DateFormatDemo {
     public static void main(String[] args) {
         formatByCountry();
-        formatByPatten();
+        formatByPattern();
     }
 
-    public static void formatByPatten() {
-        Locale vi = new Locale("vi");
+    public static void formatByPattern() {
         LocalDate now = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter
+                .ofPattern("EEEE, MMM d, yyyy");
         String formatted = now.format(formatter);
         System.out.println("formatted = " + formatted);
     }
 
     public static void formatByCountry() {
-        Locale vi = new Locale("vi");
+        Locale vi = new Locale("zh");
         LocalDate now = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL).withLocale(vi);
+        DateTimeFormatter formatter = DateTimeFormatter
+                .ofLocalizedDate(FormatStyle.FULL)
+                .withLocale(vi);
         String formatted = now.format(formatter);
         System.out.println("formatted = " + formatted);
     }
