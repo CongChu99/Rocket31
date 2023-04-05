@@ -6,19 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="lesson-03" />
+        <module name="lesson-04" />
         <module name="lesson-01" />
+        <module name="assignment-04" />
         <module name="lesson-02" />
         <module name="assignment-01" />
         <module name="assignment-02" />
+        <module name="assignment-03" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="assignment-01" target="1.8" />
-      <module name="assignment-02" target="11" />
+      <module name="assignment-02" target="1.8" />
+      <module name="assignment-03" target="11" />
+      <module name="assignment-04" target="1.8" />
       <module name="java-core" target="1.8" />
       <module name="lession-01" target="1.8" />
       <module name="lesson-01" target="1.8" />
-      <module name="lesson-02" target="11" />
+      <module name="lesson-02" target="1.8" />
+      <module name="lesson-03" target="1.8" />
+      <module name="lesson-04" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
