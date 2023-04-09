@@ -1,12 +1,12 @@
 package entity;
 
-public class CanBo {
+public class Canbo {
     protected String hoTen;
     protected int tuoi;
     protected GioiTinh gioiTinh;
     protected String diaChi;
 
-    public CanBo(String hoTen, int tuoi, GioiTinh gioiTinh, String diaChi) {
+    public void CanBo(String hoTen, int tuoi, GioiTinh gioiTinh, String diaChi) {
         this.hoTen = hoTen;
         this.tuoi = tuoi;
         this.gioiTinh = gioiTinh;
