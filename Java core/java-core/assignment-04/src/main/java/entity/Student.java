@@ -10,9 +10,9 @@ public class Student {
 
     public Student() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhap vao name:");
+        System.out.println("Nhập vào name:");
         name = scanner.nextLine();
-        System.out.println("Nhap vap hometown:");
+        System.out.println("Nhập vào hometown:");
         hometown = scanner.nextLine();
         score = 0.0;
     }
@@ -22,19 +22,19 @@ public class Student {
     }
 
     public void plusScore(double value) {
-        this.score += + value;
+        this.score += value;
     }
 
     public void showInfo() {
         String rank;
         if (score < 4.0) {
-            rank = "Yeu";
+            rank = "Yếu";
         } else if (score < 6.0) {
-            rank = "TB";
+            rank = "Trung bình";
         } else if (score < 8.0) {
-            rank = "Kha";
+            rank = "Khá";
         } else {
-            rank = "Gioi";
+            rank = "Giỏi";
         }
         System.out.printf("%s: %s%n", name, rank);
     }

@@ -1,18 +1,18 @@
 package entity;
 
-public class KySu extends Canbo{
-    private String nganhdaotao;
+public class KySu extends CanBo {
+    private String nganhDaoTao;
 
-    public KySu(String hoten, int tuoi, GioiTinh gioiTinh, String diaChi, String nganhdaotao) {
-        super(hoten, tuoi, gioiTinh, diaChi);
-        this.nganhdaotao = nganhdaotao;
+    public KySu(String hoTen, int tuoi, GioiTinh gioiTinh, String diaChi, String nganhDaoTao) {
+        super(hoTen, tuoi, gioiTinh, diaChi);
+        this.nganhDaoTao = nganhDaoTao;
     }
 
-    public String getNganhdaotao() {
-        return nganhdaotao;
+    public String getNganhDaoTao() {
+        return nganhDaoTao;
     }
 
-    public void setNganhdaotao(String nganhdaotao) {
-        this.nganhdaotao = nganhdaotao;
+    public void setNganhDaoTao(String nganhDaoTao) {
+        this.nganhDaoTao = nganhDaoTao;
     }
 }

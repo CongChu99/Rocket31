@@ -1,18 +1,26 @@
 import java.util.Scanner;
 
 public class Exercise04 {
-    public static  void question01() {
+    public static void question01() {
+        // 'Nguyen            Van             Nam'.split(...)
+        // => ['Nguyen', 'Van', 'Nam'].length
+        // Gợi ý: split
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhap vao xau ky tu :");
+        System.out.println("Nhập vào xâu kí tự:");
         String s = scanner.nextLine();
         String[] words = s.split(" ");
-        System.out.println("words = " + words.length);
+        System.out.println("Số từ là: " + words.length);
     }
 
-    public static  void question03() {
+    public static void question03() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhap vao ten cua ban :");
+        System.out.println("Nhập vào tên của bạn:");
         String name = scanner.next();
+        // khoa -> k + hoa -> K + hoa -> Khoa
+        // 0123
+        // Khoa -> Khoa
+        // Gợi ý: substring(), toUpperCase()
+        // [start, end)
         String first = name.substring(0, 1).toUpperCase();
         String remain = name.substring(1);
         String newName = first + remain;

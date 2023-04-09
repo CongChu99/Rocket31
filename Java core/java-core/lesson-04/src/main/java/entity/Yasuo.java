@@ -1,9 +1,10 @@
 package entity;
 
 public class Yasuo extends Champion implements Flyable, Runnable {
+
     @Override
     public void makeSound() {
-        System.out.println("Yasuo.........");
+        System.out.println("Yasuo...");
     }
 
     @Override

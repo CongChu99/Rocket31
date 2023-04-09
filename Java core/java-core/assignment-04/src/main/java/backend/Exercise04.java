@@ -7,6 +7,7 @@ public class Exercise04 {
         Student student = new Student();
         student.setScore(6.5);
         student.showInfo();
-        student.plusScore(5);
+        student.plusScore(3);
+        student.showInfo();
     }
 }

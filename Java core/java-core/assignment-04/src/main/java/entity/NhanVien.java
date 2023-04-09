@@ -1,18 +1,18 @@
 package entity;
 
-public class NhanVien extends Canbo {
-    private String congviec;
+public class NhanVien extends CanBo {
+    private String congViec;
 
-    public NhanVien(String hoten, int tuoi, GioiTinh gioiTinh, String diaChi, String congviec) {
-        super(hoten, tuoi, gioiTinh, diaChi);
-        this.congviec = congviec;
+    public NhanVien(String hoTen, int tuoi, GioiTinh gioiTinh, String diaChi, String congViec) {
+        super(hoTen, tuoi, gioiTinh, diaChi);
+        this.congViec = congViec;
     }
 
-    public String getCongviec() {
-        return congviec;
+    public String getCongViec() {
+        return congViec;
     }
 
-    public void setCongviec(String congviec) {
-        this.congviec = congviec;
+    public void setCongViec(String congViec) {
+        this.congViec = congViec;
     }
 }
