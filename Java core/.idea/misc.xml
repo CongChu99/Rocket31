@@ -4,6 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/java-core/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson-06/pom.xml" />
+        <option value="$PROJECT_DIR$/lesson-07/pom.xml" />
       </list>
     </option>
   </component>
