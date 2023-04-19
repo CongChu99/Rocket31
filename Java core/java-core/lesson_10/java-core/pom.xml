@@ -6,26 +6,27 @@
 
     <groupId>org.example</groupId>
     <artifactId>java-core</artifactId>
-    <version>2.1.1</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>lesson-01</module>
-        <module>assignment-01</module>
-        <module>lesson-02</module>
-        <module>assignment-02</module>
-        <module>lesson-03</module>
-        <module>assignment-03</module>
-        <module>lesson-04</module>
-        <module>assignment-04</module>
-        <module>assignment-03</module>
-        <module>assignment-07</module>
-        <module>final-exam</module>
-    </modules>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.0.32</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 </project>
