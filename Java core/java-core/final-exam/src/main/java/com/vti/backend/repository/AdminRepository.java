@@ -60,14 +60,14 @@ public class AdminRepository implements IAdminRepository {
         String sql = "{CALL sp_update_admin(?, ?, ?, ?, ?)}";
         try (
                 Connection connection = JdbcUtils.getConnection();
-                PreparedStatement pStmt = connection.prepareStatement(sql)
+                CallableStatement cStmt = connection.prepareCall(sql)
         ) {
-            pStmt.setString(1, admin.getFullName());
-            pStmt.setString(2, admin.getEmail());
-            pStmt.setString(3, admin.getPassword());
-            pStmt.setInt(4, admin.getExpInYear());
-            pStmt.setInt(5, admin.getId());
-            return pStmt.executeUpdate();
+            cStmt.setString(1, admin.getFullName());
+            cStmt.setString(2, admin.getEmail());
+            cStmt.setString(3, admin.getPassword());
+            cStmt.setInt(4, admin.getExpInYear());
+            cStmt.setInt(5, admin.getId());
+            return cStmt.executeUpdate();
         }
     }
 

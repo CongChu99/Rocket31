@@ -82,3 +82,34 @@ BEGIN
 	WHERE id = in_id AND role = 'EMPLOYEE';
 END $$
 DELIMITER ;
+
+DROP PROCEDURE IF EXISTS sp_create_user;
+DELIMITER $$
+CREATE PROCEDURE sp_create_user (
+	IN in_full_name		VARCHAR(50),
+    IN in_email 		VARCHAR(50)
+)
+BEGIN
+	INSERT INTO users (full_name   , email   , password	, role      , pro_skill, exp_in_year)
+    VALUES 			  (in_full_name, in_email, '123456Q', 'EMPLOYEE', NULL	   , NULL       );
+END $$
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS sp_update_user;
+DELIMITER $$
+CREATE PROCEDURE sp_update_user (
+	IN in_full_name		VARCHAR(50),
+    IN in_email 		VARCHAR(50),
+    IN in_password 		VARCHAR(50),
+    IN in_role       	ENUM('EMPLOYEE', 'ADMIN'),
+    IN in_id			INT
+)
+BEGIN
+	UPDATE users
+    SET full_name = in_full_name,
+		email = in_email,
+		password = in_password,
+        role = in_role
+	WHERE id = in_id;
+END $$
+DELIMITER ;
